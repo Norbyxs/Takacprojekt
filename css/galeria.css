@@ -1,0 +1,451 @@
+/*--BODY--*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/*--BODY--*/
+.hornáčasť {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f7e6bd;
+}
+
+/*--HLAVNÁSTRÁNKA_POZADIE--*/
+
+
+/*--NAVIGÁCIA--*/
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  border-bottom: 2px rgba(173, 99, 99, 0.7) solid;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a h1 {
+  color: white;
+  font-size: 50px;
+}
+
+nav a h1:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 40px;
+  position: relative;
+  right: 2%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links ul li a {
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-links ul li:hover {
+  background-color: white;
+  border-bottom: 2px solid orange;
+}
+
+.nav-links ul li:hover a {
+  color: black;
+}
+
+.nav-links ul li:hover::before {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  z-index: -1;
+}
+
+nav .fas {
+  display: none;
+}
+
+/*--NAVIGÁCIA--*/
+
+
+/*--HLADAŤ--*/
+.hladat {
+  display: flex;
+  position: relative;
+  right: 2.5%;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 10%;
+}
+
+.hladatinput {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.hladatinput::placeholder {
+  color: black;
+}
+
+.gallery {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/*--HLADAŤ--*/
+
+footer {
+  display: flex;
+  background-color: rgb(231, 201, 145);
+}
+
+.footerlava {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.footernadpis {
+  font-size: 15px;
+}
+
+.footernadpiS {
+  position: relative;
+  right: 0;
+  font-size: 50px;
+}
+
+.footermenu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footernadpis {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.footerlist {
+  padding: 0;
+  list-style: none;
+}
+
+.footerlista1 a {
+  text-decoration: none;
+}
+
+.footerlista1 a {
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.footerlista1 {
+  margin-bottom: 8px;
+}
+
+.footerlista1:hover a {
+  color: rgba(173, 99, 99, 0.7);
+}
+
+.footerprava {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footerinput {
+  padding: 5px;
+}
+
+.footerbtn {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.footerbtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.footerikony {
+  font-size: 25px;
+}
+
+.footerikony .fab {
+  color: black;
+}
+
+.footerikony .fab:hover {
+  color: gray;
+}
+
+.autor {
+  font-weight: 900;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+  .hore {
+    position: fixed;
+    top: 820px;
+    left: 355px;
+    cursor: pointer;
+  }
+
+  .hore i {
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 8%;
+    color: rgba(173, 99, 99, 0.7);
+  }
+
+  .nadpis1 h1 {
+    font-size: 23px;
+  }
+
+  .nadpis1 p {
+    font-size: 15px
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: black;
+    color: white;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    text-align: center;
+    z-index: 2;
+    left: 65%;
+    transition: 1s;
+  }
+
+  .nav-links ul li a {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 60px;
+  }
+
+  nav a h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul li:hover {
+    background-color: white;
+    border-bottom: 2px solid orange;
+  }
+
+  nav .fas {
+    display: flex;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .hladat {
+    width: 22%;
+  }
+
+  .ikons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .ikon {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .ikons img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+  }
+
+  .ikonnadpis,
+  .ikondes {
+    top: 0;
+    right: 0;
+  }
+
+  .motivacia {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7e6bd;
+    border-bottom: 2px #f7e6bd solid;
+  }
+
+  .motivaciafotka,
+  .motivaciafotka2 {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .motivaciapic {
+    width: 100%;
+  }
+
+  .login {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .login h3 {
+    font-size: 15px;
+  }
+
+  .loginin {
+    width: 100%;
+  }
+
+  .loginin:nth-child(2) {
+    padding: 50px;
+  }
+
+  .loginimg {
+    height: auto;
+  }
+
+  .loginnadpis2 {
+    font-size: 30px;
+  }
+
+  .loginbutton {
+    margin-top: 20px;
+  }
+
+  .register {
+    width: 80%;
+    padding: 20px;
+    top: 47%;
+    position: fixed;
+    left: 44%;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .login-menu {
+    width: 80%;
+    padding: 20px;
+    top: 47%;
+    position: fixed;
+    left: 44%;
+  }
+
+  .logininputbtn {
+    margin-top: 5%;
+  }
+
+  .footerlava,
+  .footerprava {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .footermenu {
+    padding: 20px;
+  }
+
+  .footernadpis {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .footerlist {
+    padding: 0;
+    list-style: none;
+  }
+
+  .footerlista1 {
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .footerlista1:hover {
+    color: rgba(173, 99, 99, 0.7);
+  }
+}
